@@ -1,0 +1,9 @@
+services:
+  # pgvectorscale ships in Timescale's HA image (which also bundles pgvector).
+  db:
+    image: timescale/timescaledb-ha:pg17
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ragdb
+    ports:
+      - "5434:5432"

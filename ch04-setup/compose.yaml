@@ -1,0 +1,11 @@
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ragdb
+    ports:
+      - "5432:5432"
+    # parallel HNSW builds use shared memory; size it at least as large as
+    # maintenance_work_mem or the build errors out.
+    shm_size: "1g"

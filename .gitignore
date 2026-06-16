@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Postgres data volumes (compose uses named/ephemeral volumes; never commit data)
+pgdata/
+*.dump

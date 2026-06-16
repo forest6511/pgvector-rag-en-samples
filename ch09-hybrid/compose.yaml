@@ -1,0 +1,18 @@
+services:
+  # Stock PostgreSQL + pgvector: the tsvector + vector + RRF examples run here.
+  db:
+    image: pgvector/pgvector:pg18
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ragdb
+    ports:
+      - "5432:5432"
+
+  # ParadeDB ships pg_search (real BM25). The bm25 examples need this image, not stock RDS.
+  paradedb:
+    image: paradedb/paradedb:latest
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ragdb
+    ports:
+      - "5433:5432"
