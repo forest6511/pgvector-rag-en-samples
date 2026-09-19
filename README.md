@@ -7,6 +7,8 @@ Every SQL and Python sample in the book is run for real against a Docker Postgre
 instance, and the verified output is what you see in the book. This repo is that code, ready to
 run yourself.
 
+Kindle edition: [pgvector at Scale for PostgreSQL](https://www.amazon.com/dp/B0H5PPQVJT)
+
 ## Contents
 
 The book is mostly concept and decision frameworks; only the chapters with runnable code have a
